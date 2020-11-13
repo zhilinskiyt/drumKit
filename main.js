@@ -5,7 +5,9 @@ window.addEventListener('keydown', function(e) {
     audio.currentTime = 0;
     audio.play();
     key.classList.add('playing');
+    
 });
+
 
 function removeTrasition(e) {
     if (e.propertyName !== 'transform') return; // skip it if it not transform
@@ -15,3 +17,12 @@ function removeTrasition(e) {
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTrasition));  
 
+
+function playSoundAfterClicking() {
+    let qqww = document.getElementById('key1');
+    key1.addEventListener('click', )
+    console.log(qqww);
+};
+
+//Run
+playSoundAfterClicking();
