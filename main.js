@@ -12,17 +12,34 @@ function removeTrasition(e) {
     this.classList.remove('playing');
 };
 
+function StartSound(e) {
+    if (audiolength = keyslength) {
+        console.log(audio[audiolength]);
+    }
+}
+
+
+const audio = document.querySelectorAll('audio');
+console.log(audio);
 const keys = document.querySelectorAll('.key');
+console.log(keys);
+let keyslength = keys.length;
+console.log(keyslength)
+let audiolength = audio.length;
+console.log(audio[1]);
+
+
 keys.forEach(key => key.addEventListener('transitionend', removeTrasition));  
+keys.forEach(key => key.addEventListener('click', StartSound));
 
 //Mouseclick event
+
 const soundaftermouseclick = () => {
-    let mouseclick = document.querySelectorAll('.key');
-    console.log(mouseclick);
-    mouseclick.addEventListener('click', function () {
-        console.log('hello world');
-    })
-};
+    const mouseclick = document.querySelectorAll('.key');
+    const audioplay = document.querySelector('.audio');
+    // mouseclick.forEach(key => ('click', console.log('hi')));
+    };
+
 
 //run
 soundaftermouseclick();
