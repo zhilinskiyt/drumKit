@@ -13,9 +13,7 @@ function removeTrasition(e) {
 };
 
 function StartSound(e) {
-    if (audiolength = keyslength) {
-        console.log(audio[audiolength]);
-    }
+    console.log(event.target);
 }
 
 
