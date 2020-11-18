@@ -12,9 +12,15 @@ function removeTrasition(e) {
     this.classList.remove('playing');
 };
 
-function StartSound(e) {
-    console.log(event.target);
-}
+function startSound() {
+    audio.forEach(sound => {
+    if(event.target.parentElement.getAttribute('data-key') === sound.getAttribute('data-key')) {
+    sound.play();
+    event.target.parentElement.classList.add('playing');
+    sound.currentTime = 0;
+    }
+    });
+   };
 
 
 const audio = document.querySelectorAll('audio');
@@ -28,7 +34,7 @@ console.log(audio[1]);
 
 
 keys.forEach(key => key.addEventListener('transitionend', removeTrasition));  
-keys.forEach(key => key.addEventListener('click', StartSound));
+keys.forEach(key => key.addEventListener('click', startSound));
 
 //Mouseclick event
 
